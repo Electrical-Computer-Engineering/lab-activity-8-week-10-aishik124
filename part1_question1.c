@@ -13,7 +13,7 @@ int my_isdigit(int c)
 }
  int my_isupper(int c)
 {
-	return c>= 'A' && c>= 'Z';
+	return c>= 'A' && c<= 'Z';
 }
 
 char my_toupper(char c)
@@ -36,16 +36,16 @@ char my_tolower(char c)
 int main ()
 {
 	char c;
-	printf("type a char for c\n");
+	printf("type a char for c: ");
 	scanf("%c", &c);
-		printf("%d\n", my_isalpha(c));
+		printf("isalpha %d\n", my_isalpha(c));
 
-		printf("%d\n", 	my_isdigit(c));
+		printf("isdigit %d\n", 	my_isdigit(c));
 
-		printf("%d\n", my_isupper(c));
+		printf("isupper %d\n", my_isupper(c));
 
-		printf("%c\n",my_toupper(c));
+		printf("toupper %c\n",my_toupper(c));
 
-		printf("%c\n",	my_tolower(c));
+		printf("tolower %c\n",	my_tolower(c));
 	return 0;
 }
