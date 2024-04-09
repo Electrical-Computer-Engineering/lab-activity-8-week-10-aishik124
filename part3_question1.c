@@ -1,29 +1,22 @@
 //Aishik Barua ID:115899946
 #include <stdio.h>
-#include <string.h>
-#define MAX 11
+#include <string.h> 
+#define MAX 50
 
-void shift(char str[]) {
-    int length = strlen(str);
-    for (int i = 0; i <=length; i--) {
-        str[i] = str[i + 1];
+
+void shift(char str1[]) 
+{
+    for (int i = 0; i < strlen(str1); i++) 
+	{
+        printf("%s\n", str1 + i);
     }
-    
 }
-
 int main() {
-    char str[MAX];
-
-    printf("Enter a string of 10 characters: ");
-    scanf("%s", str);
-
-    printf("%s\n", str);
-
-    for (int i = 0; i < 5; i++) {
-        shift(str);
-        printf("%s\n", str);
-    }
-
+    char str1[MAX];
+    int i;
+    printf("Type in string: ");
+    scanf("%s", &str1);
+    shift(str1);
     return 0;
 }
 
